@@ -3,16 +3,22 @@
 </div>
 
 # Frontend Calendar
+
 En este reto encontrarás un lindo calendario y para construirlo deberás de entrenar tu ojo junto a tus habilidades de CSS y JS.
 
 ## Desktop
 
-<img width="400px"  src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/frontend-calendar/desktop-calendario.jpg" />
+![screenshot](./src/images/desing.png)
 
+<!-- <img width="400px"  src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/frontend-calendar/desktop-calendario.jpg" /> -->
 
 ## Mobile
 
-<img width="400px"  src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/frontend-calendar/mobile-calendario.jpg" />
+<!-- ![screenshot](src/images/desing-2.png) -->
+
+<div align="center">
+    <img src="./src/images/desing-2.png">
+</div>
 
 ## Disclaimer
 
@@ -37,4 +43,3 @@ Recuerda mandar tu proyecto a revisión, si aún no conoces como funciona el pro
 Encuentra más proyectos asombrosos en [/Proyectos](https://leonidasesteban.com/proyectos)
 
 Diseñado con ♥️ en leonidasesteban.com
-

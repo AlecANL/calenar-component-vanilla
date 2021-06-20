@@ -120,28 +120,53 @@ h3 {
   font-weight: 900;
   font-size: 1.625rem;
   line-height: 1.9375rem;
-  margin-block-start: 2.5rem;
+  /* margin-block-start: 2.5rem; */
   display: inline-block;
 }
 .day {
   cursor: pointer;
 }
+
 @media screen and (min-width: 480px) {
+  .calendarContent {
+    padding-inline-start: 5rem;
+    padding-inline-end: 5rem;
+  }
+  .current-year {
+    /* margin-block-start: 1.5rem; */
+  }
+  .widget-date {
+    margin: 0;
+  }
   .calendar {
     padding-inline-start: 4rem;
     padding-inline-end: 4rem;
   }
+  .days {
+    /* grid-template-columns: repeat(7, 2rem); */
+    grid-auto-rows: 2rem;
+    font-size: 0.75rem;
+    grid-auto-rows: 2rem;
+  }
 }
-
+.calendar {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
 @media screen and (min-width: 768px) {
   .calendarContent {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 498px;
+    padding-inline-start: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
   .calendar {
     padding-inline-start: 3.8125rem;
     padding-inline-end: 3.8125rem;
     text-align: center;
+    gap: 1rem;
     /* padding-block-start: 2rem; */
   }
   .weekDays {
@@ -149,12 +174,14 @@ h3 {
   }
   .days {
     grid-auto-rows: 2.5rem;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0;
     /* grid-template-rows: repeat(5, 40px); */
     font-size: 1rem;
   }
   .widget-date {
-    margin-block-start: 1.5rem;
-    margin-block-end: 1.5rem;
+    /* margin-block-start: 1.5rem; */
+    /* margin-block-end: 1.5rem; */
   }
   .current-year {
     font-size: 2.5rem;
