@@ -38,6 +38,7 @@ function getNextDate() {
   if (handleCurrentMonth >= 12) {
     handleCurrentYear++;
     handleCurrentMonth = 0;
+    console.log(handleCurrentYear);
   }
   currentDate(handleCurrentMonth);
 }
@@ -51,7 +52,7 @@ function getPreviusDate() {
 }
 
 function currentDate(monthPosition = new Date().getMonth()) {
-  const date = handleCurrenDate(monthPosition);
+  const date = handleCurrenDate(monthPosition, handleCurrentYear);
   const days = getDaysInMonth(date);
   const { getCurrentDateFormat, getCurrentDay } = handleDate();
   let anotherDate = getCurrentDateFormat(
@@ -65,6 +66,7 @@ function currentDate(monthPosition = new Date().getMonth()) {
   renderDOM($contentDays, CalendarDay, days);
   $calendarYear.textContent = date.year;
   $month.textContent = date.month;
+
   if (new Date().getMonth() + 1 !== +date.monthPosition) {
     anotherDate = getCurrentDateFormat(
       handleCurrentYear,

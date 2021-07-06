@@ -3,10 +3,8 @@ import { getDateFormatted } from './formatDate.js';
 const getFirstDayByMonth = 1;
 const getAllDaysByMonth = 0;
 
-export let handleChangeDate = {
-  handleCurrentMonth: new Date().getMonth(),
-  handleCurrentYear: new Date().getFullYear(),
-};
+// let handleCurrentMonth= new Date().getMonth();
+let handleCurrentYear = new Date().getFullYear();
 
 export function handleDate() {
   return {
@@ -29,13 +27,13 @@ const weekDays = [
   'saturday',
 ];
 
-export function handleCurrenDate(indexMonth) {
-  const { handleCurrentYear } = handleChangeDate;
-  const firstDayByMonth = new Date(
-    handleCurrentYear,
-    indexMonth,
-    getFirstDayByMonth
-  );
+export function handleCurrenDate(indexMonth, currentYear) {
+  // const { handleCurrentYear } = handleChangeDate;
+  console.log(indexMonth);
+  // if (indexMonth === 0) {
+  //   handleCurrentYear++;
+  // }
+  const firstDayByMonth = new Date(currentYear, indexMonth, getFirstDayByMonth);
 
   const daysInMonth = new Date(
     handleCurrentYear,
@@ -49,7 +47,7 @@ export function handleCurrenDate(indexMonth) {
   return {
     getDayPosition,
     month: month.toLowerCase(),
-    year: handleCurrentYear,
+    year: currentYear,
     daysInMonth,
     monthPosition,
   };
