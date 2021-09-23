@@ -93,7 +93,21 @@ function handleCalendar(e) {
   renderDOM($calendarDate, CurrentDateWidget, dateFormatted);
 }
 
+function handleActiveDay() {
+  console.log('hello world');
+  $contentDays.addEventListener('click', e => {
+    const days = document.querySelectorAll('.day');
+    if (e.target.classList.contains('day')) {
+      days.forEach(day => {
+        day.classList.remove('current-day');
+      });
+      e.target.classList.add('current-day');
+    }
+  });
+}
+
 currentDate(handleCurrentMonth);
 $calendar.addEventListener('click', handleCalendar);
 $prev.addEventListener('click', getPreviusDate);
 $next.addEventListener('click', getNextDate);
+document.addEventListener('DOMContentLoaded', handleActiveDay);
